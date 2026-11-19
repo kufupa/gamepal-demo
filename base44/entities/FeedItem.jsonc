@@ -1,0 +1,41 @@
+{
+  "name": "FeedItem",
+  "type": "object",
+  "properties": {
+    "camp_id": {
+      "type": "string"
+    },
+    "feed_type": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "unit": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "camp_id",
+    "feed_type",
+    "amount"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

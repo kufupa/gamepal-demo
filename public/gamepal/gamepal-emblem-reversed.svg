@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="GamePal emblem">
+  <title>GamePal emblem (reversed)</title>
+  <g fill="#C9A96B">
+    <path d="M76 100 C58 76 34 48 24 22 C46 56 76 84 118 104 Z"/>
+    <path d="M180 100 C198 76 222 48 232 22 C210 56 180 84 138 104 Z"/>
+  </g>
+  <g fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M135.8 115.2 A52 52 0 1 0 150.8 147.5"/>
+    <path d="M99 152 H138"/>
+    <path d="M165 100 V204"/>
+    <path d="M165 100 H183 A26 26 0 0 1 183 152 H165"/>
+  </g>
+</svg>

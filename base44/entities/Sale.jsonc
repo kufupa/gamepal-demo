@@ -1,0 +1,108 @@
+{
+  "name": "Sale",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "bulk",
+        "individual"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "farm_id": {
+      "type": "string"
+    },
+    "camp_id": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string"
+    },
+    "animal_class": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number"
+    },
+    "animal_id": {
+      "type": "string"
+    },
+    "animal_tag": {
+      "type": "string"
+    },
+    "animal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "animal_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "group_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sex": {
+      "type": "string"
+    },
+    "sale_type": {
+      "type": "string",
+      "enum": [
+        "Auction",
+        "Private Sale",
+        "Other"
+      ]
+    },
+    "sold_at": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "group_id": {
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "deleted_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "type",
+    "date",
+    "camp_id",
+    "species"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "name": "HornMeasurement",
+  "type": "object",
+  "properties": {
+    "animal_id": {
+      "type": "string"
+    },
+    "measurement_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "inches": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "horn_length_left": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "horn_length_right": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "tip_to_tip": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "tips_left": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "tips_right": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "rings_left": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "rings_right": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "base_left": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "base_right": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "animal_id",
+    "measurement_date"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

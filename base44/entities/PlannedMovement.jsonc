@@ -1,0 +1,131 @@
+{
+  "name": "PlannedMovement",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "Planned",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Planned"
+    },
+    "planned_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "priority": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "bulk",
+        "individual"
+      ]
+    },
+    "from_farm_id": {
+      "type": "string"
+    },
+    "from_camp_id": {
+      "type": "string"
+    },
+    "destination_type": {
+      "type": "string",
+      "enum": [
+        "camp",
+        "manual"
+      ],
+      "default": "camp"
+    },
+    "to_farm_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "to_camp_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "destination_text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "species": {
+      "type": "string"
+    },
+    "animal_class": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "animal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "animal_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "note": {
+      "type": "string"
+    },
+    "completed_movement_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "completed_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    }
+  },
+  "required": [
+    "status",
+    "type",
+    "from_camp_id",
+    "destination_type"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

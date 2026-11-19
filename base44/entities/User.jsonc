@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "role": {
+      "type": "string",
+      "description": "The role of the user in the app \u2014 admin (full access) or user (viewer, read-only)",
+      "enum": [
+        "admin",
+        "user"
+      ]
+    }
+  },
+  "required": [
+    "role"
+  ],
+  "name": "User",
+  "type": "object"
+}

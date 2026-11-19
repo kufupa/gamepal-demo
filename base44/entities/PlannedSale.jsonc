@@ -1,0 +1,116 @@
+{
+  "name": "PlannedSale",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "Planned",
+        "Completed",
+        "Cancelled"
+      ],
+      "default": "Planned"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "bulk",
+        "individual"
+      ]
+    },
+    "planned_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "farm_id": {
+      "type": "string"
+    },
+    "camp_id": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string"
+    },
+    "animal_class": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "animal_id": {
+      "type": "string"
+    },
+    "animal_tag": {
+      "type": "string"
+    },
+    "animal_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "animal_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sale_type": {
+      "type": "string",
+      "enum": [
+        "Auction",
+        "Private Sale",
+        "Other"
+      ]
+    },
+    "buyer_venue": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "completed_sale_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "completed_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    }
+  },
+  "required": [
+    "status",
+    "type",
+    "camp_id",
+    "species"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

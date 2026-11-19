@@ -1,0 +1,167 @@
+{
+  "name": "Animal",
+  "type": "object",
+  "properties": {
+    "tag_number": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string"
+    },
+    "sex": {
+      "type": "string",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date"
+    },
+    "birth_year": {
+      "type": "string"
+    },
+    "current_farm_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "current_camp_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "origin_farm_id": {
+      "type": "string"
+    },
+    "origin_camp_id": {
+      "type": "string"
+    },
+    "sire_id": {
+      "type": "string"
+    },
+    "dam_id": {
+      "type": "string"
+    },
+    "sire_manual": {
+      "type": "string"
+    },
+    "dam_manual": {
+      "type": "string"
+    },
+    "sire_sire_id": {
+      "type": "string"
+    },
+    "sire_sire_manual": {
+      "type": "string"
+    },
+    "dam_sire_id": {
+      "type": "string"
+    },
+    "dam_sire_manual": {
+      "type": "string"
+    },
+    "photo_url": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "is_breeding_male": {
+      "type": "boolean",
+      "default": false
+    },
+    "breeds_species": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Alive",
+        "Deceased",
+        "Hunted",
+        "Sold"
+      ],
+      "default": "Alive"
+    },
+    "deceased_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "hunted_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "sold_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "sale_id": {
+      "type": "string"
+    },
+    "last_farm_id": {
+      "type": "string"
+    },
+    "last_camp_id": {
+      "type": "string"
+    },
+    "tag_colour": {
+      "type": "string"
+    },
+    "horn_length": {
+      "type": "string"
+    },
+    "tip_to_tip": {
+      "type": "string"
+    },
+    "purchase_auction_sale": {
+      "type": "string"
+    },
+    "purchase_seller": {
+      "type": "string"
+    },
+    "purchase_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "microchip_number": {
+      "type": "string"
+    },
+    "dna_lab_number": {
+      "type": "string"
+    },
+    "converted": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "tag_number",
+    "species",
+    "sex"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

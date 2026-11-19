@@ -1,0 +1,56 @@
+{
+  "name": "Group",
+  "type": "object",
+  "properties": {
+    "camp_id": {
+      "type": "string"
+    },
+    "farm_id": {
+      "type": "string"
+    },
+    "species": {
+      "type": "string"
+    },
+    "animal_class": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number"
+    },
+    "from_source": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "camp_id",
+    "farm_id",
+    "species",
+    "animal_class",
+    "quantity"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

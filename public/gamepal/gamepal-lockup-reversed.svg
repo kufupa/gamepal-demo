@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 184" width="576" height="184" role="img" aria-label="GamePal — Knowledge in your hands">
+  <title>GamePal — Knowledge in your hands (reversed)</title>
+
+  <g transform="translate(0,20) scale(0.586)">
+    <g fill="#C9A96B">
+      <path d="M76 100 C58 76 34 48 24 22 C46 56 76 84 118 104 Z"/>
+      <path d="M180 100 C198 76 222 48 232 22 C210 56 180 84 138 104 Z"/>
+    </g>
+    <g fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M135.8 115.2 A52 52 0 1 0 150.8 147.5"/>
+      <path d="M99 152 H138"/>
+      <path d="M165 100 V204"/>
+      <path d="M165 100 H183 A26 26 0 0 1 183 152 H165"/>
+    </g>
+  </g>
+
+  <g transform="translate(174,44) scale(0.76)" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M73.4 19.6 A43 43 0 1 0 85.8 46.3"/>
+    <path d="M43 50 H78"/>
+    <circle cx="135" cy="64" r="29"/>
+    <path d="M164 35 V93"/>
+    <path d="M184 93 V56 A21 21 0 0 1 226 56 V93"/>
+    <path d="M226 56 A21 21 0 0 1 268 56 V93"/>
+    <path d="M346 64 A29 29 0 1 0 337.5 84.5"/>
+    <path d="M295 64 H346"/>
+  </g>
+
+  <g transform="translate(174,44) scale(0.76)" fill="none" stroke="#C9A96B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M372 7 V93"/>
+    <path d="M372 7 H394 A22 22 0 0 1 394 51 H372"/>
+    <circle cx="465" cy="64" r="29"/>
+    <path d="M494 35 V93"/>
+    <path d="M514 7 V93"/>
+  </g>
+
+  <text x="174" y="152" font-family="Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" letter-spacing="4.6" fill="#EAE3D6">Knowledge in your hands</text>
+</svg>

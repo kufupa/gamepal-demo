@@ -1,0 +1,55 @@
+{
+  "name": "PlannedSaleFinance",
+  "type": "object",
+  "properties": {
+    "planned_sale_id": {
+      "type": "string"
+    },
+    "target_price": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "expected_total": {
+      "type": [
+        "number",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "planned_sale_id"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        },
+        {
+          "user_condition": {
+            "role": "user"
+          }
+        }
+      ]
+    },
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

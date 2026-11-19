@@ -1,0 +1,101 @@
+{
+  "name": "HuntEvent",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "farm_id": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "hunter_client": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "camp_id": {
+            "type": "string"
+          },
+          "species": {
+            "type": "string"
+          },
+          "animal_class": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "animal_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "animal_tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "total_animals": {
+      "type": "number"
+    },
+    "total_species": {
+      "type": "number"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "deleted_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "name",
+    "farm_id",
+    "start_date"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
